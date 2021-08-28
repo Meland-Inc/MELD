@@ -1,0 +1,22 @@
+{
+  "name": "MELD",
+  "version": "1.0.0",
+  "description": "MeLand Token",
+  "main": "index.js",
+  "repository": "https://github.com/ICodeWorld-Inc/MELD",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contracts": "^4.3.1",
+    "@openzeppelin/contracts-upgradeable": "^4.3.1",
+    "@truffle/hdwallet-provider": "^1.5.0",
+    "ganache-cli": "^6.12.2"
+  },
+  "devDependencies": {
+    "@openzeppelin/truffle-upgrades": "^1.9.0"
+  },
+  "scripts": {
+    "dev": "truffle develop",
+    "deploy": "truffle migrate"
+  }
+}
