@@ -1,10 +1,12 @@
 {
-  "name": "MELD",
+  "name": "@ICodeWorld-Inc/MELD",
   "version": "1.0.0",
   "description": "MeLand Token",
-  "main": "index.js",
   "repository": "https://github.com/ICodeWorld-Inc/MELD",
   "license": "MIT",
+  "files": [
+    "./build"
+  ],
   "dependencies": {
     "@openzeppelin/cli": "^2.8.2",
     "@openzeppelin/contracts": "^4.3.1",
