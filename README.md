@@ -12,3 +12,13 @@ yarn dev
 ```
 yarn deploy --network develop
 ```
+
+### deploy to polygon test network
+```
+yarn deploy --network mumbaimatic
+``` 
+
+### deploy to polygon main network
+```
+yarn deploy --network matic
+```
