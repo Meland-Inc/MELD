@@ -22,3 +22,8 @@ yarn deploy --network mumbaimatic
 ```
 yarn deploy --network matic
 ```
+
+### deploy to rinkeby
+```
+yarn deploy --network rinkeby
+```

@@ -2,9 +2,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 const fs = require('fs');
 
-/// 助记词
-/// 部署到 polygon matic 网络所使用的安全账号助记词.
-/// 理论上我们需要维护一个公共账号.
+/// token owner的私钥.
 /// 并且将这个更好更安全的存放起来. 只有在deploy 跟 upgrade 的时候才需要.
 /// https://docs.matic.network/docs/develop/truffle#truffle-config.
 const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -12,7 +10,7 @@ const mnemonic = fs.readFileSync(".secret").toString().trim();
 module.exports = {
   networks: {
     develop: {
-     host: "127.0.0.1",     
+     host: "127.0.0.1",
      port: 8545,           
      network_id: "*",
     },
@@ -34,6 +32,14 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true
     },
+
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/692f82659c8941269cb7fd7b12bb70af`),
+      network_id: 4,
+      confirmations: 0,
+      timeoutBlocks: 2000,
+      skipDryRun: true
+    }
   },
 
   // Set default mocha options here, use special reporters etc.
